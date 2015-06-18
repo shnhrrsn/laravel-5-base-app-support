@@ -9,6 +9,11 @@ class Bootstrap {
 			\Illuminate\Foundation\Bootstrap\LoadConfiguration::class,
 			\Shnhrrsn\LaravelSupport\Bootstrap\LoadConfiguration::class
 		);
+
+		$app->singleton(
+			'router',
+			\Shnhrrsn\LaravelSupport\Routing\Router::class
+		);
 	}
 
 }
