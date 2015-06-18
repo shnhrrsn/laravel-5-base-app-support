@@ -1,0 +1,21 @@
+{
+	"name": "shnhrrsn/laravel-5-base-app-support",
+	"description": "Support package for shnhrrsn/laravel-5-base-app.",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Shaun Harrison",
+			"email": "mail@shnhrrsn.com"
+		}
+	],
+	"require": {
+		"php": ">=5.5.9",
+		"laravel/framework": "5.1.*",
+	},
+	"autoload": {
+		"psr-4": {
+			"Shnhrrsn\\LaravelSupport": ""
+		}
+	},
+	"minimum-stability": "dev"
+}
