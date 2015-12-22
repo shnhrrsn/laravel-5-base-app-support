@@ -10,8 +10,8 @@
 	],
 	"require": {
 		"php": ">=5.5.9",
-		"laravel/framework": "5.1.*",
-		"shnhrrsn/laravel-assets": "1.1.*"
+		"laravel/framework": "5.2.*",
+		"shnhrrsn/laravel-assets": "1.2.*"
 	},
 	"autoload": {
 		"psr-4": {
