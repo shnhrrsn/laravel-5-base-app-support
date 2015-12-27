@@ -60,6 +60,11 @@ class BladeCompiler extends \Illuminate\View\Compilers\BladeCompiler {
 		return '<?php use ' . $this->sanitizeExpression($expression) . '; ?>';
 	}
 
+	public function compileVar($expression) {
+		list($var, $value) = explode(',', $this->sanitizeExpression($expression), 2);
+		return sprintf('<?php %s = %s; ?>', trim($var), trim($value));
+	}
+
 	private function sanitizeExpression($expression) {
 		$expression = trim($expression);
 
