@@ -20,13 +20,7 @@ class BladeCompiler extends \Illuminate\View\Compilers\BladeCompiler {
 	}
 
 	public function compileAsset($expression) {
-		$expression = trim($expression);
-
-		if(starts_with($expression, '(')) {
-			$expression = substr($expression, 1, -1);
-		}
-
-		list($type, $asset) = explode(',', $expression, 2);
+		list($type, $asset) = explode(',', $this->sanitizeExpression($expression), 2);
 
 		$type = trim($type);
 		$asset = trim($asset);
@@ -60,6 +54,20 @@ class BladeCompiler extends \Illuminate\View\Compilers\BladeCompiler {
 		} else {
 			throw new \Exception('@asset does not support variables for the type parameter');
 		}
+	}
+
+	public function compileUses($expression) {
+		return '<?php use ' . $this->sanitizeExpression($expression) . '; ?>';
+	}
+
+	private function sanitizeExpression($expression) {
+		$expression = trim($expression);
+
+		if(starts_with($expression, '(')) {
+			$expression = substr($expression, 1, -1);
+		}
+
+		return $expression;
 	}
 
 }
