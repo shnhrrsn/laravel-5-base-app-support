@@ -38,7 +38,7 @@ class Router extends \Illuminate\Routing\Router {
 		return parent::options($uri, $this->packAction($action, $as));
 	}
 
-	public function any($uri, $action, $as = null) {
+	public function any($uri, $action = null, $as = null) {
 		return parent::any($uri, $this->packAction($action, $as));
 	}
 
