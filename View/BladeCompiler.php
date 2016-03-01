@@ -44,6 +44,7 @@ class BladeCompiler extends \Illuminate\View\Compilers\BladeCompiler {
 				}
 			} else if($type === 'style' || $type === 'script') {
 				$var = $type . 's';
+				$path = $asset;
 			}
 
 			if($path !== null) {
