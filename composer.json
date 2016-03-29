@@ -11,7 +11,7 @@
 	"require": {
 		"php": ">=5.5.9",
 		"laravel/framework": "5.2.*",
-		"shnhrrsn/laravel-assets": "1.2.*"
+		"shnhrrsn/laravel-assets": "2.0.*"
 	},
 	"autoload": {
 		"psr-4": {
