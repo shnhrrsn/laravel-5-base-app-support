@@ -3,7 +3,7 @@
 class KeyGenerateCommand extends \Illuminate\Foundation\Console\KeyGenerateCommand {
 
 	public function fire() {
-		$key = $this->getRandomKey($this->laravel['config']['app.cipher']);
+		$key = $this->generateRandomKey($this->laravel['config']['app.cipher']);
 
 		if ($this->option('show')) {
 			return $this->comment($key);
